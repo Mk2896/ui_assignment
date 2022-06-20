@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_assignment/globals/cons_color.dart';
 
 class MyTextFormField extends StatelessWidget {
   const MyTextFormField({
@@ -16,7 +17,9 @@ class MyTextFormField extends StatelessWidget {
     this.filledBackgroundColor,
     this.hintText,
     this.hintColor,
+    this.textColor,
     this.border,
+    this.focusBorder,
     this.errorText,
     this.topPadding = 0.0,
     this.leftPadding = 0.0,
@@ -35,7 +38,9 @@ class MyTextFormField extends StatelessWidget {
   final Color? filledBackgroundColor;
   final String? hintText;
   final Color? hintColor;
+  final Color? textColor;
   final InputBorder? border;
+  final InputBorder? focusBorder;
   final String? errorText;
   final double topPadding;
   final double leftPadding;
@@ -52,7 +57,9 @@ class MyTextFormField extends StatelessWidget {
           autofocus: autoFocus,
           controller: textEditingController,
           validator: validatorMethod,
+          style: TextStyle(color: textColor),
           decoration: InputDecoration(
+            focusedBorder: focusBorder,
             errorText: errorText,
             prefixIconConstraints: prefixIconConstraints,
             prefixIcon: prefixIcon,

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ui_assignment/globals/cons_color.dart';
 
-Widget notificationBtn({void Function()? method}) {
+Widget notificationBtn({
+  void Function()? method,
+  double top = 14,
+  double right = 10,
+}) {
   method ??= () {};
-
   return Stack(
     alignment: Alignment.center,
     children: [
@@ -25,8 +28,8 @@ Widget notificationBtn({void Function()? method}) {
         color: Color(constantColor['text_color']!),
       ),
       Positioned(
-        top: 14,
-        right: 10,
+        top: top,
+        right: right,
         child: CircleAvatar(
           backgroundColor: Color(constantColor['theme']!),
           radius: 3,

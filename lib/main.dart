@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_history_observer/navigation_history_observer.dart';
 import 'package:ui_assignment/screens/home_page.dart';
 import 'package:ui_assignment/screens/splash.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const Splash(),
       home: HomePage(),
+      navigatorObservers: [NavigationHistoryObserver()],
     );
   }
 }

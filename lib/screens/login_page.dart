@@ -69,6 +69,12 @@ class _LoginPageState extends State<LoginPage> {
                 border: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(50)),
                 ),
+                focusBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(constantColor['theme']!),
+                  ),
+                  borderRadius: const BorderRadius.all(Radius.circular(50)),
+                ),
                 filledBackground: true,
                 filledBackgroundColor: Color(constantColor['text_color']!),
                 hintText: "Enter Mobile Number",
