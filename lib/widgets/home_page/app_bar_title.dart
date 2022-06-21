@@ -11,10 +11,17 @@ Widget appBarTitle(
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-      CircleAvatar(
-        radius: 24,
-        backgroundImage: const AssetImage("assets/images/profile.png"),
-        backgroundColor: Color(constantColor['background_color']!),
+      Builder(
+        builder: (context) {
+          return InkWell(
+            onTap: () => Scaffold.of(context).openDrawer(),
+            child: CircleAvatar(
+              radius: 24,
+              backgroundImage: const AssetImage("assets/images/profile.png"),
+              backgroundColor: Color(constantColor['background_color']!),
+            ),
+          );
+        },
       ),
       Expanded(
         child: MyTextFormField(

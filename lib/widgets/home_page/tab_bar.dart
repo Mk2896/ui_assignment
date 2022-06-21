@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_assignment/globals/cons_color.dart';
+import 'package:ui_assignment/globals/cons_text.dart';
 import 'package:ui_assignment/widgets/home_page/my_tabbar_indicator.dart';
 import 'package:ui_assignment/widgets/home_page/tab_text.dart';
 
@@ -15,10 +16,10 @@ TabBar tabBar(tabController) {
         indicatorSize: IndicatorSize.full),
     controller: tabController,
     tabs: [
-      tabText("Home"),
-      tabText("Balance"),
-      tabText("Offers"),
-      tabText("Rewards"),
+      tabText(constantText['home_tab']!),
+      tabText(constantText['balance_tab']!),
+      tabText(constantText['offers_tab']!),
+      tabText(constantText['rewards_tab']!),
     ],
   );
 }

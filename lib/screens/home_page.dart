@@ -7,6 +7,7 @@ import 'package:ui_assignment/screens/recieve_money.dart';
 import 'package:ui_assignment/screens/tabs/balance.dart';
 import 'package:ui_assignment/screens/tabs/home.dart';
 import 'package:ui_assignment/screens/tabs/offers.dart';
+import 'package:ui_assignment/screens/tabs/profile.dart';
 import 'package:ui_assignment/screens/tabs/rewards.dart';
 import 'package:ui_assignment/widgets/global/custom_text.dart';
 import 'package:ui_assignment/widgets/global/notification_btn.dart';
@@ -55,6 +56,8 @@ class _HomePageState extends State<HomePage>
         ),
         toolbarHeight: _searchBarHeight + 25,
         backgroundColor: Color(constantColor['secondary_background_color']!),
+        leading: const Center(),
+        leadingWidth: 0,
         title: appBarTitle(_searchController, context, _searchBarHeight),
         actions: [
           Container(
@@ -62,7 +65,6 @@ class _HomePageState extends State<HomePage>
             margin: const EdgeInsets.only(right: 10),
             child: notificationBtn(
                 method: () {
-                  Navigator.of(context).pop();
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) => const Notifications(),
@@ -76,7 +78,7 @@ class _HomePageState extends State<HomePage>
         bottom: tabBar(_tabController),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.only(top: 20),
         child: TabBarView(
           controller: _tabController,
           children: [
@@ -87,10 +89,10 @@ class _HomePageState extends State<HomePage>
           ],
         ),
       ),
+      drawer: const Profile(),
       floatingActionButton: _tabController.index == 0
           ? ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pop();
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => const RecieveMoney(),
@@ -102,7 +104,7 @@ class _HomePageState extends State<HomePage>
                     Color(constantColor['theme_dark']!)),
               ),
               child: CustomText(
-                text: "Recieve Money",
+                text: constantText['recieve_money']!,
                 fontColor: Color(constantColor['text_color']!),
                 fontSize: 11,
               ),

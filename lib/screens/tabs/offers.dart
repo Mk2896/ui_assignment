@@ -19,7 +19,9 @@ class Offers extends StatelessWidget {
           }
           return Card(
             color: Color(offersBgColor[offersBgColorIndex]),
-            margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+            margin: index == 0
+                ? const EdgeInsets.only(left: 15, right: 15, bottom: 5)
+                : const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),

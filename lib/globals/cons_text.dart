@@ -9,4 +9,9 @@ final Map<String, String> constantText = {
   "notifications": "Notifications",
   "recent_notifications": "Recent Notifications",
   "search_bar_text": "Search Users,ID’s etc",
+  "home_tab": "Home",
+  "balance_tab": "Balance",
+  "offers_tab": "Offers",
+  "rewards_tab": "Rewards",
+  "portfolio_value": "Portfolio Value",
 };

@@ -37,11 +37,7 @@ class Notifications extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                     closeBtn(
-                      () => Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: (context) => HomePage(),
-                        ),
-                      ),
+                      () => Navigator.of(context).pop(),
                     ),
                   ],
                 ),
